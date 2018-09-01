@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrgDiagram version="1.1" name="Organization Diagram" embedded="true">
+	<Organization id="a089d3a6-cba3-43a4-8f89-5d7dcee777e8" name="Portal aukcyjny" x="478" y="227" width="-1" height="-1">
+		<achieves name="achieves" score="1.0">
+			<child>21fa9010-fc2c-4e86-982b-ad247a7bcdba</child>
+		</achieves>
+		<protocol name="Informowanie o aukcji">
+			<child>2c0b342d-1e23-48a5-bc9a-f2ec4c6f5e23</child>
+		</protocol>
+	</Organization>
+	<Goal id="21fa9010-fc2c-4e86-982b-ad247a7bcdba" name="Zarzadzanie aukcjami" number="0" preference="1.0" x="462" y="391" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Actor id="6bc23ad5-8a9a-430e-b93a-9de82f543e63" name="Sprzedajacy" x="180" y="231" width="-1" height="-1">
+		<protocol name="aktualizacja aukcji">
+			<child>a089d3a6-cba3-43a4-8f89-5d7dcee777e8</child>
+			<bendpoint x="265" y="316"/>
+			<bendpoint x="356" y="311"/>
+			<bendpoint x="436" y="311"/>
+		</protocol>
+		<protocol name="wystawianie aukcji">
+			<child>a089d3a6-cba3-43a4-8f89-5d7dcee777e8</child>
+			<bendpoint x="285" y="214"/>
+			<bendpoint x="431" y="212"/>
+		</protocol>
+	</Actor>
+	<Actor id="2c0b342d-1e23-48a5-bc9a-f2ec4c6f5e23" name="Kupujacy" x="904" y="222" width="-1" height="-1">
+	</Actor>
+</OrgDiagram>

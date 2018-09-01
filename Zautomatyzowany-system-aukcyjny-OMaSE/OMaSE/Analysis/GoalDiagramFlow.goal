@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="Goal Diagram" embedded="false">
+	<Goal id="cea48e64-2730-4754-ad0d-08a09af01d41" name="Zarzadzanie aukcjami" number="0" preference="1.0" x="511" y="68" width="142" height="44" definition="" description="" color="No">
+		<and>
+			<child>c94d6b4d-15cb-421f-bc04-c9cf001c57f8</child>
+		</and>
+		<and>
+			<child>0e998ea8-4abf-452c-96b4-b0b1a0ce2752</child>
+		</and>
+		<and>
+			<child>f23f2743-12c5-40a7-a722-ef52f63ba56d</child>
+		</and>
+	</Goal>
+	<Goal id="f23f2743-12c5-40a7-a722-ef52f63ba56d" name="negocjacja transakcji" number="1" preference="1.0" x="891" y="177" width="-1" height="-1" definition="" description="" color="No">
+		<or>
+			<child>e7b4b770-e4e9-43dd-8a44-978ead6bc964</child>
+			<goalValue>0.0</goalValue>
+		</or>
+		<or>
+			<child>c5a35ae3-07df-4c56-a3eb-00495aab55c5</child>
+			<goalValue>0.0</goalValue>
+		</or>
+	</Goal>
+	<Goal id="c94d6b4d-15cb-421f-bc04-c9cf001c57f8" name="kupowanie przedmiotow" number="2" preference="1.0" x="498" y="181" width="-1" height="-1" definition="" description="" color="No">
+		<and>
+			<child>e585fb21-6bb5-454d-9473-d88d132e07e5</child>
+		</and>
+		<and>
+			<child>73beaea6-62cd-411d-b4c5-dd7b94df557c</child>
+		</and>
+	</Goal>
+	<Goal id="0e998ea8-4abf-452c-96b4-b0b1a0ce2752" name="Sprzedawanie przedmiotow" number="3" preference="1.0" x="160" y="184" width="-1" height="-1" definition="" description="" color="No">
+		<and>
+			<child>270e0f0c-4655-444c-af0c-802b5d92451c</child>
+		</and>
+		<and>
+			<child>23774f0f-effd-4e25-8481-6bd145d94a8d</child>
+		</and>
+	</Goal>
+	<Goal id="270e0f0c-4655-444c-af0c-802b5d92451c" name="Aktualizacja oferty sprzedazy" number="3.1" preference="1.0" x="60" y="312" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="accepted" min="" max="">
+			<child>e7b4b770-e4e9-43dd-8a44-978ead6bc964</child>
+			<bendpoint x="149" y="525"/>
+			<bendpoint x="686" y="519"/>
+			<parameter name="au" collection="Collection" type="Type"/>
+		</triggers>
+		<negative_triggers name="not accepted" min="" max="">
+			<child>c5a35ae3-07df-4c56-a3eb-00495aab55c5</child>
+			<bendpoint x="386" y="588"/>
+			<bendpoint x="1013" y="586"/>
+			<parameter name="au" collection="Collection" type="Type"/>
+		</negative_triggers>
+	</Goal>
+	<Goal id="23774f0f-effd-4e25-8481-6bd145d94a8d" name="wystawianie oferty sprzedazy" number="3.2" preference="1.0" x="259" y="313" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="e585fb21-6bb5-454d-9473-d88d132e07e5" name="Wystawianie oferty kupna" number="2.1" preference="1.0" x="371" y="374" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="73beaea6-62cd-411d-b4c5-dd7b94df557c" name="Aktualizacja oferty kupna" number="2.2" preference="1.0" x="621" y="372" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="accepted" min="" max="">
+			<child>e7b4b770-e4e9-43dd-8a44-978ead6bc964</child>
+			<bendpoint x="702" y="515"/>
+			<bendpoint x="918" y="511"/>
+			<parameter name="au" collection="Collection" type="Type"/>
+		</triggers>
+		<negative_triggers name="not accepted" min="" max="">
+			<child>c5a35ae3-07df-4c56-a3eb-00495aab55c5</child>
+			<bendpoint x="778" y="560"/>
+			<bendpoint x="988" y="559"/>
+			<parameter name="au" collection="Collection" type="Type"/>
+		</negative_triggers>
+	</Goal>
+	<Goal id="e7b4b770-e4e9-43dd-8a44-978ead6bc964" name="kupno przedmiotu" number="1.1" preference="1.0" x="846" y="370" width="-1" height="-1" definition="" description="" color="No">
+			<parameter name="au" collection="Collection" type="aukcja"/>
+	</Goal>
+	<Goal id="c5a35ae3-07df-4c56-a3eb-00495aab55c5" name="anulowanie transakcji" number="1.2" preference="1.0" x="1026" y="368" width="-1" height="-1" definition="" description="" color="No">
+			<parameter name="au" collection="Collection" type="aukcja"/>
+	</Goal>
+</GoalDiagram>

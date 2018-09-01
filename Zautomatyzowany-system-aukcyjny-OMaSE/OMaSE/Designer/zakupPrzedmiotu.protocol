@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProtocolDiagram version="1.1" name="zakupPrzedmiotu" embedded="false">
+	<Agent id="829353ce-e67b-4287-a5d1-5fb85d66bcab" name="Sprzedajacy" x="342" y="20" width="100" height="364">
+		<asynchronous name="potwierdzenie kupna" x="849" y="177">
+			<child>d0704a08-865f-4533-bb37-dda45cb8f46a</child>
+			<parameter name="dostawa" collection="Collection" type="Type"/>
+		</asynchronous>
+		<asynchronous name="odrzucenie kupna" x="880" y="250">
+			<child>d0704a08-865f-4533-bb37-dda45cb8f46a</child>
+			<parameter name="anulowanie transakcji" collection="Collection" type="Type"/>
+		</asynchronous>
+	</Agent>
+	<Agent id="d0704a08-865f-4533-bb37-dda45cb8f46a" name="Kupujacy" x="798" y="20" width="100" height="352">
+		<asynchronous name="ofertaKupna" x="404" y="94">
+			<child>829353ce-e67b-4287-a5d1-5fb85d66bcab</child>
+			<parameter name="zamowienie" collection="Collection" type="Type"/>
+		</asynchronous>
+	</Agent>
+	<Alternative id="55194ab8-06da-4c44-bf2b-d33c97473d90" name="Alternative" x="331" y="134" width="597" height="161">
+		<Marker id="d1f86792-b8ce-4f2f-81b3-215312e119e3" name="Marker" x="0" y="78" width="597" height="15">
+		</Marker>
+	</Alternative>
+</ProtocolDiagram>

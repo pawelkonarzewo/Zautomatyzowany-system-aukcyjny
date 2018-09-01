@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="Goal Diagram" embedded="false">
+	<Goal id="50ad80b7-754d-4388-be46-03ef56e9c5db" name="Zarzadzanie aukcjami" number="0" preference="1.0" x="484" y="99" width="-1" height="-1" definition="" description="" color="No">
+		<and>
+			<child>d4dc4797-b59e-416e-b0fa-826584874901</child>
+		</and>
+		<and>
+			<child>73b0daf8-6c5e-4e07-a985-1b5067173d43</child>
+		</and>
+		<and>
+			<child>2e772b04-f9b5-4764-862a-d9f2f8f624ca</child>
+		</and>
+	</Goal>
+	<Goal id="73b0daf8-6c5e-4e07-a985-1b5067173d43" name="Kupowanie przedmiotow" number="1" preference="1.0" x="497" y="236" width="-1" height="-1" definition="" description="" color="No">
+		<and>
+			<child>1cbbdaa7-2650-4f6b-a078-a89362087843</child>
+		</and>
+		<and>
+			<child>91cd91e8-c41b-4306-ba65-ea4e6aeb6d36</child>
+		</and>
+	</Goal>
+	<Goal id="d4dc4797-b59e-416e-b0fa-826584874901" name="Sprzedawanie przedmiotow" number="2" preference="1.0" x="195" y="227" width="-1" height="-1" definition="" description="" color="No">
+		<and>
+			<child>5583d523-4405-4dbe-b9b9-9dd933576c57</child>
+		</and>
+		<and>
+			<child>5d652d1e-b39a-44a6-ae4a-91e8c6db3bec</child>
+		</and>
+	</Goal>
+	<Goal id="2e772b04-f9b5-4764-862a-d9f2f8f624ca" name="negocjacje transakcji" number="3" preference="1.0" x="893" y="235" width="-1" height="-1" definition="" description="" color="No">
+		<or>
+			<child>cba6308e-7a19-4bd9-a97e-753903430f4c</child>
+			<goalValue>0.0</goalValue>
+		</or>
+		<or>
+			<child>331d82c4-1486-4f48-b968-94f8670d6e9b</child>
+			<goalValue>0.0</goalValue>
+		</or>
+	</Goal>
+	<Goal id="cba6308e-7a19-4bd9-a97e-753903430f4c" name="kupno przedmiotu" number="3.1" preference="1.0" x="834" y="372" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="331d82c4-1486-4f48-b968-94f8670d6e9b" name="anulowanie transakcji" number="3.2" preference="1.0" x="1029" y="371" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="91cd91e8-c41b-4306-ba65-ea4e6aeb6d36" name="Wystawianie oferty kupna" number="1.2" preference="1.0" x="612" y="373" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="5583d523-4405-4dbe-b9b9-9dd933576c57" name="Aktualizacja oferty sprzedazy" number="2.1" preference="1.0" x="45" y="326" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="5d652d1e-b39a-44a6-ae4a-91e8c6db3bec" name="Wystawianie oferty sprzedazy" number="2.2" preference="1.0" x="288" y="322" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="1cbbdaa7-2650-4f6b-a078-a89362087843" name="Aktualizacja oferty kupna" number="1.1" preference="1.0" x="390" y="374" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+</GoalDiagram>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AgentDiagram version="1.1" name="Agent Diagram" embedded="true">
+	<Actor id="afe0b716-de1f-48c1-9788-2849c0848f07" name="Sprzedajacy" x="82" y="216" width="-1" height="-1">
+		<protocol name="sprzedaje">
+			<child>fd638ebf-7a3c-4073-982d-2fa28be72097</child>
+		</protocol>
+	</Actor>
+	<Actor id="4568057b-bdee-4a5c-b6de-f4d2e646f582" name="Kupujacy" x="1016" y="204" width="-1" height="-1">
+		<protocol name="kupuje">
+			<child>2731715e-143b-4ab6-85c2-fcbf003af5ec</child>
+		</protocol>
+	</Actor>
+	<Agent id="fd638ebf-7a3c-4073-982d-2fa28be72097" name="Sprzedajacy" x="283" y="210" width="-1" height="-1">
+		<plays>
+			<child>5d46147a-3441-43b1-be91-5d4b348b2270</child>
+		</plays>
+		<protocol name="aktualizacja oferty sprzedazy">
+			<child>2731715e-143b-4ab6-85c2-fcbf003af5ec</child>
+		</protocol>
+	</Agent>
+	<Agent id="2731715e-143b-4ab6-85c2-fcbf003af5ec" name="Kupujacy" x="728" y="212" width="-1" height="-1">
+		<plays>
+			<child>32c88548-a726-4ac9-92fe-a193b5b01f0f</child>
+		</plays>
+		<protocol name="zakup przedmiotu">
+			<child>fd638ebf-7a3c-4073-982d-2fa28be72097</child>
+			<bendpoint x="556" y="143"/>
+		</protocol>
+		<protocol name="zapytanie kupna">
+			<child>fd638ebf-7a3c-4073-982d-2fa28be72097</child>
+			<bendpoint x="579" y="352"/>
+		</protocol>
+	</Agent>
+	<Role id="5d46147a-3441-43b1-be91-5d4b348b2270" name="sprzedajacy" x="92" y="371" width="-1" height="-1">
+	</Role>
+	<Role id="32c88548-a726-4ac9-92fe-a193b5b01f0f" name="kupujacy" x="715" y="352" width="-1" height="-1">
+	</Role>
+</AgentDiagram>

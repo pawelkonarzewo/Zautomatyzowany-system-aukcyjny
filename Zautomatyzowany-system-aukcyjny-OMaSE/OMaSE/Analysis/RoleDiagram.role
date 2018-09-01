@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoleDiagram version="1.1" name="Role Diagram" embedded="true">
+	<Role id="4f4125c0-37d9-4798-90f8-8940660881ae" name="Sprzedajacy" x="530" y="204" width="-1" height="-1">
+		<achieves name="achieves" score="1.0">
+			<child>b3e8654f-e0c4-4d0d-8d0a-9295ad6ee260</child>
+		</achieves>
+		<achieves name="achieves" score="1.0">
+			<child>75aa8639-cc5f-44eb-95bb-d01bae701892</child>
+		</achieves>
+		<achieves name="achieves" score="1.0">
+			<child>51f11a17-96ad-4859-99b6-8507b0b78703</child>
+		</achieves>
+	</Role>
+	<Role id="79e4b036-8ffa-4aec-b7c6-f3da02bace26" name="Kupujacy" x="111" y="208" width="224" height="88">
+		<achieves name="achieves" score="1.0">
+			<child>09bef19c-5c12-4583-abbf-64cccecc5cca</child>
+		</achieves>
+		<protocol name="zapytanie ofertowe">
+			<child>4f4125c0-37d9-4798-90f8-8940660881ae</child>
+		</protocol>
+		<protocol name="zakup przedmiotu">
+			<child>4f4125c0-37d9-4798-90f8-8940660881ae</child>
+		</protocol>
+	</Role>
+	<Goal id="09bef19c-5c12-4583-abbf-64cccecc5cca" name="Kupowanie przedmiotow" number="0" preference="1.0" x="230" y="382" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="b3e8654f-e0c4-4d0d-8d0a-9295ad6ee260" name="Odpowiedz na zapytania ofertowe" number="1" preference="1.0" x="576" y="321" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="75aa8639-cc5f-44eb-95bb-d01bae701892" name="aktualizacja oferty" number="2" preference="1.0" x="615" y="414" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="51f11a17-96ad-4859-99b6-8507b0b78703" name="sprzedawanie przedmiotow" number="3" preference="1.0" x="609" y="525" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Actor id="17d8b5ba-248a-4777-964f-aaf764d4e9ed" name="Sprzedajacy" x="1046" y="213" width="-1" height="-1">
+		<protocol name="wystawianie przedmiotu">
+			<child>4f4125c0-37d9-4798-90f8-8940660881ae</child>
+		</protocol>
+		<protocol name="aktualizuje aukcje">
+			<child>4f4125c0-37d9-4798-90f8-8940660881ae</child>
+		</protocol>
+	</Actor>
+</RoleDiagram>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlanDiagram version="1.1" name="Plan Diagram" embedded="false">
+	<Goal name="Kupujacy"/>
+	<StartState id="9741352b-1f38-490c-b504-84ce2192c26d" name="StartState0" x="141" y="109" width="-1" height="-1">
+		<transition guard="">
+			<child>6ef49910-84c4-4ccd-8c74-c33be9311d50</child>
+			<Message name="send" agents="wszyscy sprzedawcy">
+				<Performative name="ofertaKupna">
+					<parameter name="aukcja" collection="Collection" type="Type"/>
+				</Performative>
+			</Message>
+		</transition>
+	</StartState>
+	<EndState id="eb50859b-dddc-4b29-ac82-e4dde202a304" name="EndState0" x="1076" y="113" width="-1" height="-1">
+	</EndState>
+	<InternalState id="6ef49910-84c4-4ccd-8c74-c33be9311d50" name="Czekaj na aukcje" x="523" y="101" width="-1" height="-1">
+		<transition guard="timeout == true &amp;&amp; najlepszaAukcja == null">
+			<child>eb50859b-dddc-4b29-ac82-e4dde202a304</child>
+		</transition>
+		<transition guard="response != brak Aukcji()">
+			<child>5f5a7a39-c6d1-487b-a9a8-75df9266fca0</child>
+			<bendpoint x="311" y="182"/>
+			<bendpoint x="159" y="216"/>
+			<Message name="recv" agents="Sprzedajacy">
+				<Performative name="zapytanie kupna">
+					<parameter name="aukcja" collection="Collection" type="aukcja"/>
+				</Performative>
+			</Message>
+		</transition>
+		<transition guard="timeout == true &amp;&amp; najlepszaOfetra != null">
+			<child>547241f0-cddb-4958-ae59-c60389ef05bc</child>
+			<Message name="send" agents="Sprzedajacy">
+				<Performative name="zakup przedmiotu">
+					<parameter name="zamowienie" collection="Collection" type="aukcja"/>
+				</Performative>
+			</Message>
+		</transition>
+	</InternalState>
+	<InternalState id="547241f0-cddb-4958-ae59-c60389ef05bc" name="Czas na potwierdzenie " x="507" y="469" width="-1" height="-1">
+		<transition guard="">
+			<child>911a40e4-43a6-4b32-b9cf-7dd2079c69e4</child>
+			<Message name="recv" agents="">
+				<Performative name="potwierdzenie ">
+					<parameter name="aukcja" collection="Collection" type="aukcja"/>
+				</Performative>
+			</Message>
+		</transition>
+		<transition guard="">
+			<child>eb50859b-dddc-4b29-ac82-e4dde202a304</child>
+			<bendpoint x="913" y="389"/>
+			<Message name="recv" agents="">
+				<Performative name="odrzucenie">
+					<parameter name="aukcja" collection="Collection" type="aukcja"/>
+				</Performative>
+			</Message>
+		</transition>
+	</InternalState>
+	<InternalState id="5f5a7a39-c6d1-487b-a9a8-75df9266fca0" name="Aktualizuj najlepasza cena" x="62" y="301" width="188" height="58">
+		<transition guard="">
+			<child>6ef49910-84c4-4ccd-8c74-c33be9311d50</child>
+			<bendpoint x="320" y="329"/>
+		</transition>
+	</InternalState>
+	<InternalState id="911a40e4-43a6-4b32-b9cf-7dd2079c69e4" name="Usun z poszukiwan" x="1029" y="465" width="-1" height="-1">
+		<transition guard="">
+			<child>eb50859b-dddc-4b29-ac82-e4dde202a304</child>
+		</transition>
+	</InternalState>
+</PlanDiagram>
